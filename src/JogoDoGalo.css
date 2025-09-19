@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://preview.redd.it/i-made-a-classic-roblox-version-of-the-windows-xp-wallpaper-v0-vth1bp8oy97f1.png?auto=webp&s=58df8670e089fc7378d14e4de0d3da6081f17dad');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+.tabuleiro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.67); /* semi-transparent background for clarity */
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.linha {
+    display: flex;
+    gap: 10px;
+}
+
+.casa {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: transparent; /* removed white background */
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.casa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.casa img {
+    width: 100%;   /* fill the entire square */
+    height: 100%;  /* fill the entire square */
+    object-fit: contain; /* scale image correctly without distortion */
+    pointer-events: none;
+}
+
+#reiniciar {
+    width: 50px;              /* set the size of the button */
+    height: 50px;
+    padding: 0;               /* remove default padding */
+    border: none;             /* remove border */
+    border-radius: 50%;       /* optional: make it circular */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2725/2725164.png'); /* your icon path */
+    background-size: cover;   /* cover the entire button */
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+
+#reiniciar:hover {
+    transform: scale(1.1);    /* subtle hover effect */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
